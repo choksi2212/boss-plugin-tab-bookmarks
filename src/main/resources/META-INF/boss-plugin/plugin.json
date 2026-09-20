@@ -1,0 +1,22 @@
+{
+  "manifestVersion": 1,
+  "pluginId": "ai.rever.boss.plugin.dynamic.tabbookmarks",
+  "displayName": "Tab Bookmarks",
+  "version": "0.1.0",
+  "apiVersion": "1.0.93",
+  "minApiVersion": "1.0.93",
+  "minBossVersion": "9.4.2",
+  "mainClass": "ai.rever.boss.plugin.dynamic.bookmarks.BookmarksDynamicPlugin",
+  "type": "mixed",
+  "description": "Bookmark manager with folders, tags, notes, visit counts and optional page-content snapshots - fills the metadata gap in the existing URL-only bookmarks",
+  "author": "Choksi",
+  "url": "https://github.com/choksi2212/boss-plugin-tab-bookmarks",
+  "panel": { "position": "left_bottom", "priority": 82 },
+  "sandbox": {
+    "maxThreads": 4,
+    "maxRestartAttempts": 3,
+    "heartbeatIntervalMs": 5000
+  },
+  "isolationMode": "out-of-process",
+  "fallback": "in-process"
+}
