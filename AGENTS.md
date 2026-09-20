@@ -94,3 +94,20 @@ The `processResources` task automatically syncs the version into `plugin.json` a
 | `archiveSnapshot` | 1 MiB |
 | `crossRefs` per bookmark | 100 |
 | Search/list result count | 200 |
+
+## Cross-plugin integration
+
+`PageContentBridge` looks up the page-content plugin's `PageContentProvider`
+reflectively through `context.getPluginAPI(Class.forName(...))`. The lookup is
+best-effort: with the page-content plugin not installed every bridge method
+returns null or an empty flow, and the panel's "archive" affordance shows a
+"plugin not available" state rather than throwing.
+
+## Local development
+
+The Gradle build pulls `boss-plugin-api` 1.0.93 from a sibling checkout at
+`../boss-plugin-api/build/libs/boss-plugin-api-1.0.93.jar` unless `CI=true`.
+That mirrors CI, which downloads the same jar from the public release on
+GitHub. A mismatch between the local jar and the released jar is a real
+source of build failures - bump `bossPluginApiPath` in `build.gradle.kts`
+when the api jar version changes.
