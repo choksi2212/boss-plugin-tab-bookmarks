@@ -1,0 +1,20 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+# The release workflow publishes a GitHub Release and the plugin store; the
+# store upload uses a project-scoped token. Without contents: write that step
+# 403s on tag creation, and the workflow dies before any plugin is built.
+permissions:
+  contents: write
+
+jobs:
+  release:
+    uses: risa-labs-inc/BossConsole-Releases/.github/workflows/plugin-release.yml@main
+    with:
+      boss_plugin_api_version: 'latest'
+    secrets:
+      BOSS_STORE_PLUGIN_PUBLISH_KEY: ${{ secrets.BOSS_STORE_PLUGIN_PUBLISH_KEY }}
