@@ -9,9 +9,12 @@
   "mainClass": "ai.rever.boss.plugin.dynamic.bookmarks.BookmarksDynamicPlugin",
   "type": "mixed",
   "description": "Bookmark manager with folders, tags, notes, visit counts and optional page-content snapshots - fills the metadata gap in the existing URL-only bookmarks",
-  "author": "Choksi",
+  "author": "choksi2212",
   "url": "https://github.com/choksi2212/boss-plugin-tab-bookmarks",
-  "panel": { "position": "left_bottom", "priority": 82 },
+  "panel": {
+    "position": "left_bottom",
+    "priority": 82
+  },
   "sandbox": {
     "maxThreads": 4,
     "maxRestartAttempts": 3,
