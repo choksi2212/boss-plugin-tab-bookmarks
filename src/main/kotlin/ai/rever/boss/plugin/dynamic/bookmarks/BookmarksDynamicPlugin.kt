@@ -23,7 +23,7 @@ class BookmarksDynamicPlugin : DynamicPlugin {
     override val description: String =
         "Bookmark manager with folders, tags, notes, visit counts and optional " +
         "page-content snapshots - fills the metadata gap in the existing URL-only bookmarks"
-    override val author: String = "Choksi"
+    override val author: String = "choksi2212"
     override val url: String = "https://github.com/choksi2212/boss-plugin-tab-bookmarks"
 
     private var store: BookmarksStore? = null

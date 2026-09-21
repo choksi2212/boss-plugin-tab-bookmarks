@@ -57,6 +57,10 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
+
+    testImplementation(files("$bossPluginApiPath/build/libs/boss-plugin-api-1.0.93.jar"))
+    testImplementation("org.jetbrains.kotlin:kotlin-test:2.3.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
 }
 
 // The loadable plugin JAR: compiled classes + the plugin.json manifest.
